@@ -61,3 +61,18 @@ a:hover {
     padding-top: 50px;
     padding-bottom: 10px;
 }
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+}
+
+@media only screen and (orientation: landscape) {
+    /* For landscape orientation */
+
+}
