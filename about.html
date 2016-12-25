@@ -8,18 +8,53 @@
     <title>Seven Sisters - ABOUT US</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/png" href="images/sleep.png"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <script>
+    var n = true;
+    function menu_drop() {
+        if (n == true) {
+            document.getElementById("drop_down").innerHTML = document.getElementById("menu").innerHTML;
+            n = false;
+        }
+        else {
+            document.getElementById("drop_down").innerHTML = "";
+            n = true;
+        }
+    }
+
+    var images = [];
+    function preload() {
+        for (var i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+        }
+    }
+
+    //-- usage --//
+    preload(
+        "images/mountains.jpg",
+        "images/mountains2.jpg",
+        "images/mountains3.jpg",
+        "images/sleep.png"
+    )
+    </script>
 
   </head>
   <body>
 
-    <div class="menu"><a href="about.html"><em>ABOUT US</em></a></div>
-    <div class="menu"><a href="patients.html"><em>PATIENTS</em></a></div>
-    <div class="menu"><a href="index.html"><em>HOME</em></a></div>
+    <div id="menu_mobile" onclick="menu_drop()">&#8801</div>
 
-    <div id="t1"><em>Seven Sisters, <small>Midwifery Care</small></em></div>
+    <div id="t1"><a href="index.html"><em>Seven Sisters, <small>Midwifery Care</small></em></a></div>
+    <div id="menu">
+        <a class="m1" href="about.html"><em><small>ABOUT US</em></small></a>
+        <a class="m1" href="patients.html"><small><em>PATIENTS</em></small></a>
+    </div>
     <div id="l1"></div>
 
-    <div><img src="images/mountains.jpg" id="p1"></div>
+    <div id="drop_down"></div>
+
+    <div><img src="images/mountains2.jpg" id="p1"></div>
 
     <div id="footer"></div>
 
