@@ -1,62 +1,46 @@
-<!DOCTYPE html>
+---
+---
+<div class="banner"></div>
 
-<!-- html for project archive -->
+<div class="mission-box">
+  <div class="span12">
+  <h3>Your Story of Heartfelt, Personalized Prenatal and Well-Woman Care Starts Here ...</h3>
+  <p> Love where you get your care. That’s our vision: the creation of a warm,
+  comfortable and inviting space to receive prenatal and gynecological care
+  and to birth your baby. The certified-nurse midwives of Seven Sisters
+  Midwifery and Community Birth Center provide the highest quality clinical
+  care in a space that celebrates your body, your family and your birth. Join
+  us as we write a new story of giving birth in western Massachusetts.</p>
+  <p>Now accepting patients for well-women gynecological care in our temporary
+  office in downtown Northampton. Please go to our calendar below to schedule
+  an appointment.</p>
+  <p>New offices and free-standing birth center coming to Florence/Northampton
+  in 2019!</p>
+  </div>
+</div>
 
-<html>
-  <head>
-
-    <title>Seven Sisters - HOME</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" type="image/png" href="images/sleep.png"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-
-    <script>
-    var n = true;
-    function menu_drop() {
-        if (n == true) {
-            document.getElementById("drop_down").innerHTML = document.getElementById("menu").innerHTML;
-            n = false;
-        }
-        else {
-            document.getElementById("drop_down").innerHTML = "";
-            n = true;
-        }
-    }
-
-    var images = [];
-    function preload() {
-        for (var i = 0; i < preload.arguments.length; i++) {
-            images[i] = new Image();
-            images[i].src = preload.arguments[i];
-        }
-    }
-
-    //-- usage --//
-    preload(
-        "images/mountains.jpg",
-        "images/mountains2.jpg",
-        "images/mountains3.jpg",
-        "images/sleep.png"
-    )
-    </script>
-
-  </head>
-  <body>
-
-    <div id="menu_mobile" onclick="menu_drop()">&#8801</div>
-
-    <div id="t1"><a href="index.html"><em>Seven Sisters, <small>Midwifery Care</small></em></a></div>
-    <div id="menu">
-        <a class="m1" href="about.html"><em><small>ABOUT US</em></small></a>
-        <a class="m1" href="patients.html"><small><em>PATIENTS</em></small></a>
+<div class="row">
+  <div class="span12">
+    <div class="row">
+      <div class="span6">
+        {% assign images = site.categories.blog[0].content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+            {% assign attributes = image | split:"/>" | first %}
+            <a href="{{ site.categories.blog[0].url }}">
+                <img {{attributes}} />
+            </a>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% assign post = site.categories.blog[0] %}
+      </div>
+    	<div class="span6 recent-posts">
+    	  <h3 class="widget-title srp-widget-title">Most Recent Blog Post</h3>
+        <div class="srp-widget-container">
+          {% include recent_post_summary.html post=post counter=0 %}
+        </div>
+    	</div>
     </div>
-    <div id="l1"></div>
-
-    <div id="drop_down"></div>
-
-    <div><img src="images/mountains.jpg" id="p1"></div>
-
-    <div id="footer"></div>
-
-  </body>
-</html>
+  </div>
+</div>
