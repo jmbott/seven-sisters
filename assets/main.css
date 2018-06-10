@@ -1,0 +1,117 @@
+/* additional style for sevensisters */
+
+body {
+  background-color: #fff;
+  color: #404040;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 40px;
+}
+
+.btn {
+  font-size: 20px;
+    /*padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;*/
+}
+
+/*.nav-b a:link {color:#404040;}      /* unvisited link */
+/*.nav-b a:visited {color:#404040;}  /* visited link */
+a:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}  /* mouse over link */
+/*.nav-b a:active {color:#404040;}  /* selected link */
+
+.nav-logo {
+  height: 90px;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: transparent;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#8039ac' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*.custom-toggler:hover .navbar-toggler-icon:hover {
+  opacity: 0.6;
+}*/
+
+.home {
+  width: 100%;
+}
+
+.jumbotron {
+  background-color: #fff;
+  padding: 5px;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:visited,
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+  color: #8039ac !important;
+  border-color: #8039ac !important;
+  box-shadow: none !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #ffffff !important;
+  background-color: #c69fdf !important;
+  border-color: #c69fdf !important;
+  box-shadow: none !important;
+}
+
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:active,
+.btn-primary.active {
+  color: #ffffff !important;
+  background-color: #8039ac !important;
+  border-color: #8039ac !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #c69fdf !important;
+  border-color: #c69fdf !important;
+  box-shadow: none !important;
+}
+
+.hr-bar {
+   height: 10px;
+   width: 100%;
+   background-color: #f0f0ff;
+}
+
+.wt-bar {
+   height: 20px;
+   width: 100%;
+   background-color: #fff;
+}
+
+.nav-a {
+  padding-top: 45px !important;
+  font-size: 20px;
+  color: #8039ac !important;
+}
+
+.nav-b {
+  padding-left: 20px !important;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }

@@ -1,0 +1,60 @@
+url: "http://test.test.com"
+name: >
+  Seven Sisters
+description: >
+  Testy test test test
+
+# Site settings
+title: "Seven Sisters"
+email: your-email@columbia.edu
+description: >
+  Testy test test
+baseurl: ""
+
+plugins:
+  - jekyll-redirect-from
+
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
+
+exclude: [path, vendor]
+
+collections:
+  team:
+    output: true
+    permalink: /team/:title/
+
+# Navigation
+navigation:
+#- text: about
+#  url: /about/
+#- text: blog
+#  url: /blog/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      tags: "Untagged"
+  -
+    scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
+  -
+    scope:
+      path: "data"
+    values:
+      layout: null

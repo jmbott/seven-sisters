@@ -1,0 +1,12 @@
+<div id="rp-singlepost-{{ include.counter }}" class="rp-widget-singlepost">
+  <div class="rp-post-content-container">
+    <div class="srp-content-box">
+      <h4 class="rp-post-title"><a class="rp-post-title-link" href="{{ include.post.url }}" title="{{ include.post.title }}">{{ include.post.title }}</a></h4>
+      <p class="rp-post-date">{{ include.post.date | date: "%b %-d, %Y"}}</p>
+      <div class="rp-post-content">
+	       {{ include.post.content | strip_html | truncatewords: 30 | remove: '...' }}
+	       <a class="rp-post-stringbreak-link" href="{{ include.post.url }}" title="{{ include.post.title }}">[...]</a>
+      </div>
+    </div>
+  </div>
+</div>

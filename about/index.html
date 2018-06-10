@@ -1,0 +1,49 @@
+---
+title: About
+---
+
+<!-- Current Members (team) -->
+
+<div class="row-fluid">
+  <div class="span9">
+    <h2>
+      Team
+    </h2> Description Here
+  </div>
+</div>
+
+{% assign current = site.team | where:"status","current" %}
+{% for member in current %}
+    <a class="profile" href="{{ member.url }}">
+        <img class="profile_img" src="{{ member.photo }}">
+        <div class="profile_name">
+            {{ member.full_name}}
+        </div>
+        <div class="profile_position">
+            {{ member.position }}
+        </div>
+    </a>
+{% endfor %}
+
+
+<div class="clearfix"></div>
+<br>
+<!-- Alumni -->
+
+<div class="row-fluid">
+    <div class="span9">
+        <h2>Alumni</h2>
+    </div>
+</div>
+
+{% assign former = site.team | where:"status","former" %}
+{% for alum in former %}
+<div class="row">
+    <div class="span3">
+        {{ alum.full_name }}
+    </div>
+    <div class="span6">
+        {{ alum.employer }}
+    </div>
+</div>
+{% endfor %}
