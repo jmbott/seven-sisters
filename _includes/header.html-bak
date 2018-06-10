@@ -1,0 +1,19 @@
+<div class="hr-bar"></div>
+<div class="wt-bar"></div>
+<div class="container navigation">
+  <div class="row">
+    <div class="span3">
+      <a href="/"><img class="hr-logo" src="/assets/uploads/theme/logo.png"></a>
+    </div>
+    <div class="span9">
+      <ul class="navlist">
+    		{% for link in site.navigation %}
+    		{% assign url = page.url|remove:'index.html' %}
+    		<li {% if url == link.url %}class="current-menu-item"{% endif %}>
+    			<a href="{{link.url}}">{{link.text}}</a>
+    		</li>
+    		{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

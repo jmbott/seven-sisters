@@ -1,19 +1,28 @@
 <div class="hr-bar"></div>
 <div class="wt-bar"></div>
-<div class="container navigation">
-  <div class="row">
-    <div class="span3">
-      <a href="/"><img class="hr-logo" src="/assets/uploads/theme/logo.png"></a>
-    </div>
-    <div class="span9">
-      <ul class="navlist">
-    		{% for link in site.navigation %}
-    		{% assign url = page.url|remove:'index.html' %}
-    		<li {% if url == link.url %}class="current-menu-item"{% endif %}>
-    			<a href="{{link.url}}">{{link.text}}</a>
-    		</li>
-    		{% endfor %}
+
+<script async="async" src="https://static.cozycal.com/embed/v1/2326.js"></script>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a href="/#" class="navbar-left"><img class="nav-logo" src="/assets/uploads/theme/logo.png"></a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        {% for link in site.navigation %}
+        {% assign url = page.url|remove:'index.html' %}
+        <li {% if url == link.url %}class="nav-item current-menu-item"{% endif %}>
+          <a class="nav-a nav-b nav-link" href="{{link.url}}">{{link.text}}</a>
+        </li>
+        {% endfor %}
       </ul>
+      <span class="nav-a">
+        <a class="btn btn-outline-primary" href="https://cozycal.com/sevensistersmidwifery" role="button">
+          book appointment
+        </a>
+      </span>
     </div>
-  </div>
+  </nav>
 </div>
