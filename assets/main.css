@@ -30,7 +30,14 @@ a:hover {
 }
 
 .custom-toggler.navbar-toggler {
+  margin-top: 30px !important;
+  margin-bottom: 50px !important;
   border-color: transparent;
+}
+
+.buttons {
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .custom-toggler .navbar-toggler-icon {
